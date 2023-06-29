@@ -3,7 +3,14 @@ import './App.scss';
 
 const App = () =>
 	<div className="App">
-		Ready to start.
+		Ready to start the car design !
+		<div className="bus">
+			<div className="window"/>
+			<div className="window1"/>
+			<div className="cover"/>
+			<div className="tire"/>
+		</div>
+		<div className="road"/>
 	</div>;
 
 export default App;
