@@ -20,7 +20,9 @@
 .window {
 	width: 60px;
 	height: 60px;
-	background-color: white;
+	background-image: url("./images/krishna.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 70px;
 	right: 120px;
@@ -31,7 +33,9 @@
 	content: "";
 	width: 60px;
 	height: 60px;
-	background-color: white;
+	background-image: url("./images/girl.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: absolute;
 	right: 120px;
 	border-radius: 10px;
@@ -41,7 +45,9 @@
 	content: "";
 	width: 60px;
 	height: 60px;
-	background-color: white;
+	background-image: url("./images/cat.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: absolute;
 	left: -240px;
 	border-radius: 10px;
@@ -50,7 +56,9 @@
 .window1 {
 	width: 60px;
 	height: 60px;
-	background-color: white;
+	background-image: url("./images/images.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 70px;
 	left: 160px;
@@ -102,15 +110,15 @@
 	height: 200px;
 	background-color: grey;
 	position: relative;
-	top: 574px;
-
+	top: 535px;
 }
 
 @keyframes bus {
-	0%{
+	0% {
 		transform: translate(0px);
 	}
-100%{
-	transform: translate(1000px);
-}
+
+	100% {
+		transform: translate(750px);
+	}
 }
