@@ -6,7 +6,6 @@
 	}
 }
 
-
 .bus {
 	background-color: yellowgreen;
 	position: absolute;
@@ -18,48 +17,10 @@
 .window {
 	width: 20%;
 	height: 20%;
-	background-image: url("./images/krishna.gif");
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
 	top: 23%;
-	right: 12%;
-	border-radius: 10%;
-}
-
-.window::after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-image: url("./images/girl.gif");
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: absolute;
-	right: 70%;
-	border-radius: 10%;
-}
-
-.window::before {
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-image: url("./images/cat.gif");
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: absolute;
-	right: 140%;
-	border-radius: 10%;
-}
-
-.window1 {
-	width: 20%;
-	height: 20%;
-	background-image: url("./images/images.gif");
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 23%;
-	left: 24%;
 	border-radius: 10%;
 }
 

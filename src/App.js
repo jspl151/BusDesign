@@ -1,5 +1,6 @@
 import { React } from 'react';
 import './App.scss';
+import Windows from './components/Widows';
 
 const App = (context) => {
 	const { config: { busWidth, dif, roadTop }} = context;
@@ -14,12 +15,10 @@ const App = (context) => {
 			} }
 			className="bus"
 		>
-			<div className="window"/>
-			<div className="window1"/>
+			<Windows{ ...context }/>
 			<div className="cover"/>
 			<div className="tire"/>
-		</div>
-	</div>;
+		</div></div>;
 };
 
 export default App;
