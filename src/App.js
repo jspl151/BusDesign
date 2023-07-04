@@ -2,15 +2,15 @@ import { React } from 'react';
 import './App.scss';
 
 const App = (context) => {
-	const { config: { width, dif, roadTopPosition }} = context;
+	const { config: { busWidth, dif, roadTop }} = context;
 
 	return <div className="App">
 		<div className="road"/>
 		<div
 			style={ {
-				width: `${ width }%`,
-				height: `${ width - dif }%`,
-				top: `${ roadTopPosition - (width - dif) }%`,
+				width: `${ busWidth }%`,
+				height: `${ busWidth - dif }%`,
+				top: `${ roadTop - (busWidth - dif) }%`,
 			} }
 			className="bus"
 		>
