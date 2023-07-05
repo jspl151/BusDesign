@@ -3,20 +3,22 @@ import './App.scss';
 import Bus from './components/Bus';
 import busStop from './images/busStop.webp';
 
+const maxHeight = 100;
+const fixHeight = 4;
+
 const App = (context) => {
-	const { config: { roadTop }} = context;
+	const { config: { roadHeight }} = context;
 
 	return (
 		<div
 			style={ {
 				backgroundImage: `url(${ busStop })`,
-
 				backgroundSize: 'contain',
-				height: '800px',
+				height: `${ maxHeight - roadHeight + fixHeight }vh`,
 			} }
 			className="App"
 		>
-			<div style={ { top: `${ `${ roadTop }` }%` } } className="road"/>
+			<div style={ { height: `${ roadHeight }%` } } className="road"/>
 			<Bus { ...context }/>
 		</div>);
 };

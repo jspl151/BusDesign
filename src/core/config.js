@@ -9,20 +9,20 @@ const max = 60;
 
 const config = {
 	dif: 20,
-	roadTop: 78,
+	roadHeight: 25,
 	busWidth: rndBetween(min, max),
 	windowRight: 2,
 	windowImages: [krishna, girl, cat, boy],
 	buses: [{
 		x: 2,
-		y: 1,
+		y: 3,
 		animation: 'busForward',
 		backgroundColor: '#ffca00',
 		direction: 1,
 	},
 	{
 		x: 40,
-		y: 17,
+		y: -15,
 		animation: 'busReverse',
 		backgroundColor: 'green',
 		direction: -1,
