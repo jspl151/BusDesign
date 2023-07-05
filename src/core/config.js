@@ -9,7 +9,7 @@ const max = 60;
 
 const config = {
 	dif: 20,
-	roadTop: 58,
+	roadTop: 78,
 	busWidth: rndBetween(min, max),
 	windowRight: 2,
 	windowImages: [krishna, girl, cat, boy],
@@ -22,7 +22,7 @@ const config = {
 	},
 	{
 		x: 40,
-		y: 27,
+		y: 17,
 		animation: 'busReverse',
 		backgroundColor: 'green',
 		direction: -1,
