@@ -13,6 +13,20 @@ const config = {
 	busWidth: rndBetween(min, max),
 	windowRight: 2,
 	windowImages: [krishna, girl, cat, boy],
+	buses: [{
+		x: 2,
+		y: 1,
+		animation: 'busForward',
+		backgroundColor: '#ffca00',
+		direction: 1,
+	},
+	{
+		x: 40,
+		y: 27,
+		animation: 'busReverse',
+		backgroundColor: 'green',
+		direction: -1,
+	}],
 
 };
 
