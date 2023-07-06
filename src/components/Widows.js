@@ -7,6 +7,7 @@ const Windows = (context) => {
 	return <div>
 		{map(windowImages, (window, key) =>
 			<div
+				key={ window }
 				style={ {
 					right: `${ windowRight * (key + 1) }%`,
 					backgroundImage: `url(${ process.env.PUBLIC_URL }${ window })`,

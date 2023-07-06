@@ -20,8 +20,9 @@ const Bus = (context) => {
 	const { config: { buses }} = context;
 
 	return <div>
-		{map(buses, (bus) =>
+		{map(buses, (bus, index) =>
 			<div
+				key={ index }
 				style={ getBusStyle({ ...context, data: bus }) }
 				className="bus"
 			>

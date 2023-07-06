@@ -9,6 +9,7 @@ const Stripes = (context) => {
 	return <div>
 		{map(range(0, stripesCount), (stripe) =>
 			<div
+				key={ stripe }
 				style={ {
 					right: `${ stripeRight * stripe }%`,
 					bottom: `${ roadHeight / mid }%`,
