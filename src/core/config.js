@@ -1,8 +1,4 @@
 import { rndBetween } from '@laufire/utils/lib';
-import krishna from '../images/krishna.gif';
-import girl from '../images/girl.gif';
-import boy from '../images/images.gif';
-import cat from '../images/cat.gif';
 
 const min = 40;
 const max = 60;
@@ -14,7 +10,12 @@ const config = {
 	busWidth: rndBetween(min, max),
 	dif: 20,
 	windowRight: 2,
-	windowImages: [krishna, girl, cat, boy],
+	windowImages: [
+		'./images/krishna.gif',
+		'./images/girl.gif',
+		'./images/cat.gif',
+		'./images/images.gif',
+	],
 	buses: [{
 		x: 2,
 		y: 3,

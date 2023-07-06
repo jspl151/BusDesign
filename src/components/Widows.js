@@ -9,7 +9,7 @@ const Windows = (context) => {
 			<div
 				style={ {
 					right: `${ windowRight * (key + 1) }%`,
-					backgroundImage: `url(${ window })`,
+					backgroundImage: `url(${ process.env.PUBLIC_URL }${ window })`,
 				} }
 				className="window"
 			/>)}

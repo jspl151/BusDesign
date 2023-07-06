@@ -1,7 +1,6 @@
 import { React } from 'react';
 import './App.scss';
 import Bus from './components/Bus';
-import busStop from './images/busStop.webp';
 import Stripes from './components/Stripes';
 
 const maxHeight = 100;
@@ -13,7 +12,7 @@ const App = (context) => {
 	return (
 		<div
 			style={ {
-				backgroundImage: `url(${ busStop })`,
+				backgroundImage: `url(${ process.env.PUBLIC_URL }./images/busStop.webp)`,
 				backgroundSize: 'contain',
 				height: `${ maxHeight - roadHeight + fixHeight }vh`,
 			} }
