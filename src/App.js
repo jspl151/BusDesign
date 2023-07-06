@@ -2,6 +2,7 @@ import { React } from 'react';
 import './App.scss';
 import Bus from './components/Bus';
 import busStop from './images/busStop.webp';
+import Stripes from './components/Stripes';
 
 const maxHeight = 100;
 const fixHeight = 4;
@@ -19,6 +20,7 @@ const App = (context) => {
 			className="App"
 		>
 			<div style={ { height: `${ roadHeight }%` } } className="road"/>
+			<Stripes { ...context }/>
 			<Bus { ...context }/>
 		</div>);
 };

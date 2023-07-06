@@ -37,7 +37,7 @@
 	height: 100%;
 	background-color: saddlebrown;
 	position: absolute;
-	left:178%;
+	left: 178%;
 	border-radius: 300px 300px 0px 0px;
 }
 
@@ -63,10 +63,16 @@
 
 .road {
 	width: 100%;
-	bottom:0%;
+	bottom: 0%;
 	background-color: grey;
 	position: absolute;
+}
 
+.stripes {
+	width: 10%;
+	height: 3%;
+	background-color: white;
+	position: absolute;
 }
 
 @keyframes busForward {
@@ -78,6 +84,7 @@
 		transform: translate(800px);
 	}
 }
+
 @keyframes busReverse {
 	0% {
 		transform: translate(0px) scaleX(-1);

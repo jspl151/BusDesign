@@ -8,9 +8,11 @@ const min = 40;
 const max = 60;
 
 const config = {
-	dif: 20,
 	roadHeight: 25,
+	stripesCount: 8,
+	stripeRight: 15,
 	busWidth: rndBetween(min, max),
+	dif: 20,
 	windowRight: 2,
 	windowImages: [krishna, girl, cat, boy],
 	buses: [{
