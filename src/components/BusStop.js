@@ -1,6 +1,9 @@
 import { React } from 'react';
 import { map } from '@laufire/utils/collection';
-import Windows from './Widows';
+import Windows from './Windows';
+import Driver from './Driver';
+import Door from './Door';
+import Wheels from './Wheels';
 
 const getBusStyle = (context) => {
 	const { config: { busWidth, dif, roadHeight }, data: bus } = context;
@@ -10,13 +13,13 @@ const getBusStyle = (context) => {
 		height: `${ busWidth - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation }  3s linear infinite`,
+		animation: `${ bus.animation }   linear infinite`,
 		backgroundColor: bus.backgroundColor,
 		transform: `scaleX(${ bus.direction })`,
 	};
 };
 
-const Bus = (context) => {
+const BusStop = (context) => {
 	const { config: { buses }} = context;
 
 	return <div>
@@ -26,11 +29,12 @@ const Bus = (context) => {
 				style={ getBusStyle({ ...context, data: bus }) }
 				className="bus"
 			>
+				<Driver { ...context }/>
+				<Door { ...context }/>
 				<Windows { ...context }/>
-				<div className="cover"/>
-				<div className="tire"/>
+				<Wheels { ...context }/>
 			</div>)}
 	</div>;
 };
 
-export default Bus;
+export default BusStop;

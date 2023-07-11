@@ -3,10 +3,11 @@ import { React } from 'react';
 
 const mid = 2;
 
-const Stripes = (context) => {
+const Road = (context) => {
 	const { config: { stripesCount, stripeRight, roadHeight }} = context;
 
 	return <div>
+		<div style={ { height: `${ roadHeight }%` } } className="road"/>
 		{map(range(0, stripesCount), (stripe) =>
 			<div
 				key={ stripe }
@@ -19,4 +20,4 @@ const Stripes = (context) => {
 	</div>;
 };
 
-export default Stripes;
+export default Road;

@@ -11,44 +11,73 @@
 	border-radius: 40px 200px 40px 20px;
 }
 
+.door {
+	width: 10%;
+	height: 77%;
+	background-color: brown;
+	position: absolute;
+	margin-right: 24%;
+	bottom: 0%;
+}
+
+.doorFrame {
+	width: 85%;
+	height: 90%;
+	background-color: white;
+	position: absolute;
+	border-radius: 5%;
+	bottom: 5%;
+}
+
+.driver {
+	width: 18%;
+	height: 40%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 23%;
+	border-radius: 10%;
+	background-color: blue;
+}
+
 .window {
-	width: 25%;
+	width: 10%;
 	height: 25%;
-	background-size: contain;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
 	top: 23%;
 	border-radius: 10%;
 }
 
-.cover {
-	width: 25%;
-	height: 33%;
+.rim {
+	width: 20%;
+	height: 28%;
 	background-color: saddlebrown;
 	position: absolute;
-	top: 67%;
-	left: 14%;
+	top: 72%;
+	left: 5%;
 	border-radius: 300px 300px 0px 0px;
 }
 
-.cover::after {
+.rim::after {
 	content: "";
 	width: 100%;
 	height: 100%;
 	background-color: saddlebrown;
 	position: absolute;
-	left: 178%;
+	left: 350%;
 	border-radius: 300px 300px 0px 0px;
 }
 
 .tire {
-	width: 19%;
-	height: 40%;
+	width: 15%;
+	height: 30%;
 	background-color: black;
 	position: absolute;
-	top: 76%;
-	left: 17%;
-	border-radius: 50%;
+	top: 78%;
+	left: 7%;
+	border-radius: 55%;
 }
 
 .tire::after {
@@ -57,7 +86,7 @@
 	height: 100%;
 	background-color: black;
 	position: absolute;
-	left: 233%;
+	left: 470%;
 	border-radius: 50%;
 }
 
@@ -87,10 +116,10 @@
 
 @keyframes busReverse {
 	0% {
-		transform: translate(0px) scaleX(-1);
+		transform: translate(200%) scaleX(-1);
 	}
 
 	100% {
-		transform: translate(-800px)scaleX(-1);
+		transform: translate(-200%)scaleX(-1);
 	}
 }
