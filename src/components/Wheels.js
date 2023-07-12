@@ -1,8 +1,9 @@
-import { React } from 'react';
+import React from 'react';
 
 const Wheels = () => <div>
-	<div className="rim"/>
-	<div className="tire"/>
+	<div className="rims"/>
+	<div className="outerTyres"/>
+	<div className="innerTyres"/>
 </div>;
 
 export default Wheels;

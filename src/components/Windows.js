@@ -1,6 +1,6 @@
+import React from 'react';
 import { map } from '@laufire/utils/collection';
 import { rndValues } from '@laufire/utils/random';
-import { React } from 'react';
 
 const Windows = (context) => {
 	const { config: { windowRight, passengers, windowsCount }} = context;

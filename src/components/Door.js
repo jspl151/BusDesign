@@ -1,5 +1,5 @@
+import React from 'react';
 import { map, range } from '@laufire/utils/collection';
-import { React } from 'react';
 
 const Door = (context) => {
 	const { config: { doorPanelCount, doorPanelRight }} = context;

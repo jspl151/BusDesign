@@ -1,10 +1,10 @@
-import { React } from 'react';
+import React from 'react';
 import { map } from '@laufire/utils/collection';
-import { rndValues } from '@laufire/utils/random';
 import Windows from './Windows';
 import Driver from './Driver';
 import Door from './Door';
 import Wheels from './Wheels';
+import { rndValue } from '@laufire/utils/random';
 
 const getBusStyle = (context) => {
 	const { config: { busWidth, dif, roadHeight }, data: bus } = context;
@@ -14,13 +14,13 @@ const getBusStyle = (context) => {
 		height: `${ busWidth - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation } 3s  linear infinite`,
-		backgroundColor: rndValues(bus.backgroundColor, 1),
+		animation: `${ bus.animation } linear infinite`,
+		backgroundColor: rndValue(bus.backgroundColor),
 		transform: `scaleX(${ bus.direction })`,
 	};
 };
 
-const BusStop = (context) => {
+const Buses = (context) => {
 	const { config: { buses }} = context;
 
 	return <div>
@@ -38,4 +38,4 @@ const BusStop = (context) => {
 	</div>;
 };
 
-export default BusStop;
+export default Buses;
