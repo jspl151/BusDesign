@@ -1,3 +1,7 @@
+html {
+	overflow: hidden;
+}
+
 .App {
 	text-align: center;
 
@@ -17,21 +21,22 @@
 }
 
 .door {
-	width: 8%;
+	width: 16%;
 	height: 77%;
 	background-color: brown;
 	position: absolute;
-	margin-right: 24%;
+	right: 28%;
 	bottom: 0%;
 }
 
 .doorFrame {
-	width: 85%;
-	height: 90%;
+	width: 6.5%;
+	height: 65%;
 	background-color: white;
 	position: absolute;
 	border-radius: 5%;
 	bottom: 5%;
+	margin-right: 28%;
 }
 
 .driver {
@@ -40,6 +45,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
+	right: 10%;
 	top: 23%;
 	border-radius: 10%;
 	background-color: blue;
@@ -103,8 +109,8 @@
 	top: 82%;
 	left: 9%;
 	border-radius: 50%;
-	border:2px dashed black;
-	animation:rotate  infinite linear;
+	border: 2px dashed black;
+	animation: rotate 1s infinite linear;
 }
 
 .innerTyres::after {
@@ -115,8 +121,9 @@
 	position: absolute;
 	left: 705%;
 	border-radius: 50%;
-	border:2px dashed black;
-	transform:rotate  infinite linear;;
+	border: 2px dashed black;
+	transform: rotate 1s infinite linear;
+	;
 }
 
 .road {
@@ -174,6 +181,11 @@
 }
 
 @keyframes rotate {
-	0% {transform: rotate(0deg)}
-	100% {transform: rotate(360deg)}
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
 }

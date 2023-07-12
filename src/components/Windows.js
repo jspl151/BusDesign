@@ -8,7 +8,7 @@ const Windows = (context) => {
 	return <div>
 		{(map(rndValues(passengers, windowsCount), (passenger, key) =>
 			<div
-				key={ window }
+				key={ passenger }
 				style={ {
 					left: `${ windowRight * (key + 1) }%`,
 					backgroundImage: `url(${ process.env.PUBLIC_URL }${ passenger })`,

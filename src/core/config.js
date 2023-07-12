@@ -1,16 +1,9 @@
-import { rndBetween } from '@laufire/utils/lib';
-
-const min = 30;
-const max = 50;
-
 const config = {
-	roadHeight: 25,
+	roadHeight: 35,
 	stripesCount: 8,
 	stripeRight: 15,
-	busWidth: rndBetween(min, max),
-	dif: 20,
-	doorPanelCount: 2,
-	doorPanelRight: 0.8,
+	doorFramesCount: 2,
+	doorFramesRight: 0.8,
 	windowRight: 1.4,
 	windowsCount: 4,
 	passengers: [
@@ -27,7 +20,7 @@ const config = {
 	],
 	buses: [{
 		x: 2,
-		y: 3,
+		y: -3,
 		animation: 'busForward',
 		backgroundColor: ['violet', 'brown', 'lightblue', 'yellowGreen'],
 		direction: 1,
@@ -35,7 +28,7 @@ const config = {
 	},
 	{
 		x: 20,
-		y: 5,
+		y: -5,
 		animation: 'nextBusForward',
 		backgroundColor: ['red', 'yellow', 'green', 'orange'],
 		direction: 1,

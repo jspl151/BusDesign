@@ -5,16 +5,21 @@ import Driver from './Driver';
 import Door from './Door';
 import Wheels from './Wheels';
 import { rndValue } from '@laufire/utils/random';
+import { rndBetween } from '@laufire/utils/lib';
+
+const min = 30;
+const max = 50;
+const dif = 20;
 
 const getBusStyle = (context) => {
-	const { config: { busWidth, dif, roadHeight }, data: bus } = context;
+	const { config: { roadHeight }, data: bus } = context;
 
 	return {
-		width: `${ busWidth }%`,
-		height: `${ busWidth - dif }%`,
+		width: `${ rndBetween(min, max) }%`,
+		height: `${ rndBetween(min, max) - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation } linear infinite`,
+		animation: `${ bus.animation } 3s linear infinite`,
 		backgroundColor: rndValue(bus.backgroundColor),
 		transform: `scaleX(${ bus.direction })`,
 	};

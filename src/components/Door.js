@@ -2,19 +2,18 @@ import React from 'react';
 import { map, range } from '@laufire/utils/collection';
 
 const Door = (context) => {
-	const { config: { doorPanelCount, doorPanelRight }} = context;
+	const { config: { doorFramesCount, doorFramesRight }} = context;
 
 	return <div>
-		{(map(range(0, doorPanelCount), (door, key) =>
+		<div className="door"/>
+		{(map(range(0, doorFramesCount), (doorFrame, key) =>
 			<div
-				key={ door }
+				key={ doorFrame }
 				style={ {
-					right: `${ doorPanelRight * (key + 1) }%`,
+					right: `${ doorFramesRight * (key + 1) }%`,
 				} }
-				className="door"
-			>
-				<div className="doorFrame"/>
-			</div>))}
+				className="doorFrame"
+			/>))}
 	</div>;
 };
 
