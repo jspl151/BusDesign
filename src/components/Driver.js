@@ -1,15 +1,14 @@
-import { rndValues } from '@laufire/utils/random';
 import { React } from 'react';
 
 const Driver = (context) => {
-	const { config: { driverWindowImages }} = context;
+	const { data } = context;
 
 	return (
 		<div
 
 			style={ {
-				right: '5%',
-				backgroundImage: `url(${ process.env.PUBLIC_URL }${ rndValues(driverWindowImages, 1) })`,
+				right: '10%',
+				backgroundImage: `url(${ process.env.PUBLIC_URL }${ data.driverImage })`,
 			} }
 			className="driver"
 		/>);

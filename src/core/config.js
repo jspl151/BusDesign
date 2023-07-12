@@ -1,7 +1,7 @@
 import { rndBetween } from '@laufire/utils/lib';
 
-const min = 50;
-const max = 75;
+const min = 30;
+const max = 50;
 
 const config = {
 	roadHeight: 25,
@@ -10,16 +10,10 @@ const config = {
 	busWidth: rndBetween(min, max),
 	dif: 20,
 	doorPanelCount: 2,
-	doorPanelRight: 1,
+	doorPanelRight: 0.8,
 	windowRight: 1.4,
 	windowsCount: 4,
-	driverWindowImages: [
-		'./images/driver1.jpg',
-		'./images/driver2.jpeg',
-		'./images/driver3.jpeg',
-		'./images/driver4.webp',
-	],
-	windowImages: [
+	passengers: [
 		'./images/krishna.gif',
 		'./images/girl.gif',
 		'./images/cat.gif',
@@ -35,15 +29,33 @@ const config = {
 		x: 2,
 		y: 3,
 		animation: 'busForward',
-		backgroundColor: '#ffca00',
+		backgroundColor: ['violet', 'lightRed', 'lightblue', 'yellowGreen'],
 		direction: 1,
+		driverImage: './images/driver1.png',
+	},
+	{
+		x: 20,
+		y: 5,
+		animation: 'nextBusForward',
+		backgroundColor: ['red', 'yellow', 'green', 'orange'],
+		direction: 1,
+		driverImage: './images/driver.png',
 	},
 	{
 		x: 40,
 		y: -15,
 		animation: 'busReverse',
-		backgroundColor: 'green',
+		backgroundColor: ['violet', 'lightRed', 'green', 'orange'],
 		direction: -1,
+		driverImage: './images/driver2.jpeg',
+	},
+	{
+		x: 60,
+		y: -25,
+		animation: 'nextBusReverse',
+		backgroundColor: ['red', 'yellow', 'lightblue', 'yellowGreen'],
+		direction: -1,
+		driverImage: './images/driver3.jpeg',
 	}],
 
 };
