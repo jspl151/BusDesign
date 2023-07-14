@@ -7,7 +7,7 @@ import Wheels from './Wheels';
 import { rndValue } from '@laufire/utils/random';
 import { rndBetween } from '@laufire/utils/lib';
 
-const min = 30;
+const min = 40;
 const max = 50;
 const dif = 20;
 
@@ -19,7 +19,7 @@ const getBusStyle = (context) => {
 		height: `${ rndBetween(min, max) - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation } 3s linear infinite`,
+		animation: `${ bus.animation } 0s linear infinite`,
 		backgroundColor: rndValue(bus.backgroundColor),
 		transform: `scaleX(${ bus.direction })`,
 	};

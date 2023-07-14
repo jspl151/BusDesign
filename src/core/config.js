@@ -4,8 +4,9 @@ const config = {
 	stripeRight: 15,
 	doorFramesCount: 2,
 	doorFramesRight: 0.8,
-	windowRight: 1.4,
+	windowLeft: 1.4,
 	windowsCount: 4,
+	wheelLeft: 1.55,
 	passengers: [
 		'./images/krishna.gif',
 		'./images/girl.gif',
@@ -17,6 +18,10 @@ const config = {
 		'./images/girl1.jpg',
 		'./images/girl2.jpeg',
 		'./images/Murugan.jpg',
+	],
+	wheels: [
+		{ x: 2 },
+		{ x: 51 },
 	],
 	buses: [{
 		x: 2,

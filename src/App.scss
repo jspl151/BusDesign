@@ -61,70 +61,41 @@ html {
 	border-radius: 10%;
 }
 
-.rims {
-	width: 20%;
-	height: 28%;
-	background-color: saddlebrown;
+.wheelCovers{
+	background-color: whitesmoke;
+	width: 16vmin;
+	height: 8vmin;
+	border-top-left-radius: 16vmin;
+  border-top-right-radius: 16vmin;
+	bottom:0%;
 	position: absolute;
-	top: 72%;
-	left: 5%;
-	border-radius: 300px 300px 0px 0px;
+
 }
 
-.rims::after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-color: saddlebrown;
-	position: absolute;
-	left: 350%;
-	border-radius: 300px 300px 0px 0px;
-}
-
-.outerTyres {
-	width: 15%;
-	height: 30%;
+.outerWheels {
 	background-color: black;
+	height: 12vmin;
+	width: 12vmin;
+	border-radius: 50%;
 	position: absolute;
-	top: 78%;
-	left: 7%;
-	border-radius: 55%;
+	margin: 2vmin;
+	margin: 2vmin;
+
 }
 
-.outerTyres::after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-color: black;
-	position: absolute;
-	left: 470%;
+.innerWheels {
+	background-color: lightgreen;
+	height: 6vmin;
+	width: 6vmin;
 	border-radius: 50%;
+	border:6px dashed brown;
+	animation:rotate 5s linear infinite;
+	margin: 3vmin auto;
+	margin: 3vmin auto;
+
+
 }
 
-.innerTyres {
-	width: 10%;
-	height: 20%;
-	background-color: white;
-	position: absolute;
-	top: 82%;
-	left: 9%;
-	border-radius: 50%;
-	border: 2px dashed black;
-	animation: rotate 1s infinite linear;
-}
-
-.innerTyres::after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-color: white;
-	position: absolute;
-	left: 705%;
-	border-radius: 50%;
-	border: 2px dashed black;
-	transform: rotate 1s infinite linear;
-	;
-}
 
 .road {
 	width: 100%;
@@ -142,41 +113,41 @@ html {
 
 @keyframes busForward {
 	0% {
-		transform: translate(-200px);
+		transform: translate(-120%);
 	}
 
 	100% {
-		transform: translate(1000px);
+		transform: translate(400%);
 	}
 }
 
 @keyframes busReverse {
+	0% {
+		transform: translate(100%) scaleX(-1);
+	}
+
+	100% {
+		transform: translate(-450%)scaleX(-1);
+	}
+}
+
+@keyframes nextBusForward {
+	0% {
+		transform: translate(-350%);
+	}
+
+	100% {
+		transform: translate(190%);
+	}
+}
+
+@keyframes nextBusReverse {
 	0% {
 		transform: translate(200%) scaleX(-1);
 	}
 
 	100% {
 		transform: translate(-200%)scaleX(-1);
-	}
-}
-
-@keyframes nextBusForward {
-	0% {
-		transform: translate(200px);
-	}
-
-	100% {
-		transform: translate(1400px);
-	}
-}
-
-@keyframes nextBusReverse {
-	0% {
-		transform: translate(1000px) scaleX(-1);
-	}
-
-	100% {
-		transform: translate(0px)scaleX(-1);
 	}
 }
 
