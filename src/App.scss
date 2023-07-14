@@ -17,7 +17,7 @@ html {
 
 .bus {
 	position: absolute;
-	border-radius: 40px 200px 40px 20px;
+	border-radius: 40px 100px 40px 20px;
 }
 
 .door {
@@ -61,15 +61,14 @@ html {
 	border-radius: 10%;
 }
 
-.wheelCovers{
+.wheelCovers {
 	background-color: whitesmoke;
 	width: 16vmin;
 	height: 8vmin;
 	border-top-left-radius: 16vmin;
-  border-top-right-radius: 16vmin;
-	bottom:0%;
+	border-top-right-radius: 16vmin;
+	bottom: 0%;
 	position: absolute;
-
 }
 
 .outerWheels {
@@ -77,10 +76,8 @@ html {
 	height: 12vmin;
 	width: 12vmin;
 	border-radius: 50%;
+	margin: 2vmin;
 	position: absolute;
-	margin: 2vmin;
-	margin: 2vmin;
-
 }
 
 .innerWheels {
@@ -88,14 +85,44 @@ html {
 	height: 6vmin;
 	width: 6vmin;
 	border-radius: 50%;
-	border:6px dashed brown;
-	animation:rotate 5s linear infinite;
-	margin: 3vmin auto;
-	margin: 3vmin auto;
-
-
+	border: 6px dashed brown;
+	animation: rotate 5s linear infinite;
+	margin: calc(3vmin - 6px) auto;
+}
+.indicators{
+width:3%;
+height:14%;
+position: absolute;
+left:-3%;
 }
 
+.topCarrier{
+	width:70%;
+	height:10%;
+	position: absolute;
+	top:-10%;
+	background-color: brown;
+	border-radius: 25% 25% 0% 0%;
+	left:5%
+}
+
+.luggageSection{
+	width:25%;
+	height:30%;
+	position: absolute;
+	bottom:7%;
+	background-color:grey;
+	left:22%
+}
+
+.luggageSecHandle{
+	width:8%;
+	height:2%;
+	position: absolute;
+	bottom:10%;
+	background-color: black;
+	left:30%
+}
 
 .road {
 	width: 100%;

@@ -7,7 +7,8 @@ const config = {
 	windowLeft: 1.4,
 	windowsCount: 4,
 	wheelLeft: 1.55,
-	passengers: [
+	indicatorsBottom: 1.5,
+	windows: [
 		'./images/krishna.gif',
 		'./images/girl.gif',
 		'./images/cat.gif',
@@ -19,6 +20,10 @@ const config = {
 		'./images/girl2.jpeg',
 		'./images/Murugan.jpg',
 	],
+	indicators: [
+		{ y: 4, backgroundColor: 'red' },
+		{ y: 13, backgroundColor: 'orange' },
+	],
 	wheels: [
 		{ x: 2 },
 		{ x: 51 },
@@ -27,7 +32,7 @@ const config = {
 		x: 2,
 		y: -3,
 		animation: 'busForward',
-		backgroundColor: ['violet', 'brown', 'lightblue', 'yellowGreen'],
+		backgroundColor: ['violet', '#eecf90', 'lightblue', 'yellowGreen'],
 		direction: 1,
 		driverImage: './images/driver1.png',
 	},
@@ -43,7 +48,7 @@ const config = {
 		x: 40,
 		y: -15,
 		animation: 'busReverse',
-		backgroundColor: ['violet', 'brown', 'green', 'orange'],
+		backgroundColor: ['violet', '#eecf90', 'green', 'orange'],
 		direction: -1,
 		driverImage: './images/driver2.jpeg',
 	},

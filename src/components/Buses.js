@@ -6,6 +6,7 @@ import Door from './Door';
 import Wheels from './Wheels';
 import { rndValue } from '@laufire/utils/random';
 import { rndBetween } from '@laufire/utils/lib';
+import ExtraFittings from './ExtraFittings';
 
 const min = 40;
 const max = 50;
@@ -19,7 +20,7 @@ const getBusStyle = (context) => {
 		height: `${ rndBetween(min, max) - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation } 0s linear infinite`,
+		animation: `${ bus.animation } 10s linear infinite`,
 		backgroundColor: rndValue(bus.backgroundColor),
 		transform: `scaleX(${ bus.direction })`,
 	};
@@ -29,14 +30,15 @@ const Buses = (context) => {
 	const { config: { buses }} = context;
 
 	return <div>
-		{map(buses, (bus, index) =>
+		{map(buses, (bus) =>
 			<div
-				key={ index }
+				key={ bus }
 				style={ getBusStyle({ ...context, data: bus }) }
 				className="bus"
 			>
 				<Driver { ...{ ...context, data: bus } }/>
 				<Door { ...context }/>
+				<ExtraFittings { ...context }/>
 				<Windows { ...context }/>
 				<Wheels { ...context }/>
 			</div>)}

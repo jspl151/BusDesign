@@ -17,8 +17,7 @@ const Road = (context) => {
 				} }
 				className="stripes"
 			/>)}
-	</div>
-	;
+	</div>;
 };
 
 export default Road;

@@ -7,7 +7,7 @@ import Environment from './components/Environment.js';
 const App = (context) => <div>
 	<Environment { ...context }/>
 	<Road { ...context }/>
-	<BusStop { ...context }/>;
+	<BusStop { ...context }/>
 </div>;
 
 export default App;
