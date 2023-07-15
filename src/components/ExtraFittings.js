@@ -8,6 +8,8 @@ const ExtraFittings = (context) => {
 		<div className="topCarrier"/>
 		<div className="luggageSection"/>
 		<div className="luggageSecHandle"/>
+		<div className="mirror"/>
+		<div className="mirrorHandle"/>
 		{(map(indicators, (indicator) =>
 			<div
 				key={ indicator }
