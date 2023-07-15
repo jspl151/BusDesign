@@ -15,9 +15,35 @@ html {
 	background-size: contain;
 }
 
+.road {
+	width: 100%;
+	bottom: 0%;
+	background-color: grey;
+	position: absolute;
+}
+
+.stripes {
+	width: 10%;
+	height: 3%;
+	background-color: white;
+	position: absolute;
+}
+
 .bus {
 	position: absolute;
 	border-radius: 40px 100px 40px 20px;
+}
+
+.driver {
+	width: 16%;
+	height: 38%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 10%;
+	top: 23%;
+	border-radius: 10%;
+	border: 3px solid saddlebrown;
 }
 
 .door {
@@ -36,18 +62,6 @@ html {
 	position: absolute;
 	border-radius: 5%;
 	bottom: 6%;
-}
-
-.driver {
-	width: 16%;
-	height: 38%;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	position: absolute;
-	right: 10%;
-	top: 23%;
-	border-radius: 10%;
-	border: 3px solid saddlebrown;
 }
 
 .window {
@@ -125,18 +139,26 @@ html {
 	left: 30%
 }
 
-.road {
-	width: 100%;
-	bottom: 0%;
-	background-color: grey;
+.mirror{
+	width:4%;
+	height:25%;
 	position: absolute;
+	top:4%;
+	right:-4.5%;
+	border-radius: 30%;
+	background-color: yellow;
 }
 
-.stripes {
-	width: 10%;
-	height: 3%;
-	background-color: white;
+.mirrorHandle{
+	width:10%;
+	height:4%;
 	position: absolute;
+	top:4%;
+	right:-4%;
+	background-color: yellow;
+	border-top-right-radius: 30%;
+	border-bottom-right-radius: 30%;
+	transform: skewX(50deg);
 }
 
 @keyframes busForward {
