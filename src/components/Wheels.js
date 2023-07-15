@@ -8,8 +8,10 @@ const Wheels = (context) => {
 		{ map(wheels, (wheel) =>
 			<div
 				key={ wheel }
-				style={ {	left: `${ wheelLeft * wheel.x }%`	} }
-				className="wheelCovers"
+				{ ...{
+					style: {	left: `${ wheelLeft * wheel.x }%`	 },
+					className: 'wheelCovers',
+				} }
 			>
 				<div className="outerWheels">
 					<div className="innerWheels"/>

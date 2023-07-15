@@ -14,13 +14,14 @@ const dif = 20;
 
 const getBusStyle = (context) => {
 	const { config: { roadHeight }, data: bus } = context;
+	const size = rndBetween(min, max);
 
 	return {
-		width: `${ rndBetween(min, max) }%`,
-		height: `${ rndBetween(min, max) - dif }%`,
+		width: `${ size }%`,
+		height: `${ size - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation } 10s linear infinite`,
+		animation: `${ bus.animation } 0s linear infinite`,
 		backgroundColor: rndValue(bus.backgroundColor),
 		transform: `scaleX(${ bus.direction })`,
 	};

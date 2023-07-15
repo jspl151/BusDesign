@@ -2,8 +2,7 @@ const config = {
 	roadHeight: 35,
 	stripesCount: 8,
 	stripeRight: 15,
-	doorFramesCount: 2,
-	doorFramesRight: 0.8,
+	doorFramesRight: 2,
 	windowLeft: 1.4,
 	windowsCount: 4,
 	wheelLeft: 1.55,
@@ -20,14 +19,21 @@ const config = {
 		'./images/girl2.jpeg',
 		'./images/Murugan.jpg',
 	],
+	doorFrames: [
+		{ x: 4 },
+		{ x: 25 },
+	],
+
 	indicators: [
 		{ y: 4, backgroundColor: 'red' },
 		{ y: 13, backgroundColor: 'orange' },
 	],
+
 	wheels: [
 		{ x: 2 },
 		{ x: 51 },
 	],
+
 	buses: [{
 		x: 2,
 		y: -3,
