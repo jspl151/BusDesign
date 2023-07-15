@@ -4,9 +4,9 @@ import Windows from './Windows';
 import Driver from './Driver';
 import Door from './Door';
 import Wheels from './Wheels';
-import { rndValue } from '@laufire/utils/random';
 import { rndBetween } from '@laufire/utils/lib';
 import ExtraFittings from './ExtraFittings';
+import getRandomHex from '../services/getRandomHex';
 
 const min = 40;
 const max = 50;
@@ -22,7 +22,7 @@ const getBusStyle = (context) => {
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
 		animation: `${ bus.animation } 0s linear infinite`,
-		backgroundColor: rndValue(bus.backgroundColor),
+		backgroundColor: `#${ getRandomHex() }`,
 		transform: `scaleX(${ bus.direction })`,
 	};
 };
