@@ -21,7 +21,7 @@ const getBusStyle = (context) => {
 		height: `${ size - dif }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
-		animation: `${ bus.animation } 0s linear infinite`,
+		animation: `${ bus.animation } 10s linear infinite`,
 		backgroundColor: `#${ getRandomHex() }`,
 		transform: `scaleX(${ bus.direction })`,
 	};
