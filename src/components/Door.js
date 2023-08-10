@@ -6,9 +6,9 @@ const Door = (context) => {
 
 	return (
 		<div className="door">
-			{(map(doorFrames, (doorFrame) =>
+			{(map(doorFrames, (doorFrame, index) =>
 				<div
-					key={ doorFrame }
+					key={ index }
 					style={ {
 						right: `${ doorFramesRight * doorFrame.x }%`,
 					} }

@@ -1,17 +1,17 @@
 import React from 'react';
 import { map } from '@laufire/utils/collection';
-import { rndValues } from '@laufire/utils/random';
+import { values } from '@laufire/utils/lib';
 
 const Windows = (context) => {
-	const { config: { windowLeft, windows, windowsCount }} = context;
+	const { data: { windows }} = context;
 
 	return <div>
-		{(map(rndValues(windows, windowsCount), (window, key) =>
+		{values(map(windows, (window, key) =>
 			<div
-				key={ window }
+				key={ key }
 				style={ {
-					left: `${ windowLeft * (key + 1) }%`,
-					backgroundImage: `url(${ process.env.PUBLIC_URL }${ window })`,
+					left: `${ window.windowLeft * (key + 1) }%`,
+					backgroundImage: `url(${ process.env.PUBLIC_URL }${ window.passengers })`,
 				} }
 				className="window"
 			/>))}

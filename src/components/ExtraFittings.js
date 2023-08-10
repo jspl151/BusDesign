@@ -10,9 +10,9 @@ const ExtraFittings = (context) => {
 		<div className="luggageSecHandle"/>
 		<div className="mirror"/>
 		<div className="mirrorHandle"/>
-		{(map(indicators, (indicator) =>
+		{(map(indicators, (indicator, index) =>
 			<div
-				key={ indicator }
+				key={ index }
 				style={ {
 					bottom: `${ indicatorsBottom * indicator.y }%`,
 					backgroundColor: indicator.backgroundColor,

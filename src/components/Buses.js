@@ -31,15 +31,15 @@ const Buses = (context) => {
 	const { config: { buses }} = context;
 
 	return <div>
-		{map(buses, (bus) =>
+		{map(buses, (bus, index) =>
 			<div
-				key={ bus }
+				key={ index }
 				style={ getBusStyle({ ...context, data: bus }) }
 				className="bus"
 			>
 				<Driver { ...{ ...context, data: bus } }/>
 				<Door { ...context }/>
-				<Windows { ...context }/>
+				<Windows { ...{ ...context, data: bus } }/>
 				<ExtraFittings { ...context }/>
 				<Wheels { ...context }/>
 			</div>)}

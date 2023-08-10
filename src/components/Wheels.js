@@ -5,9 +5,9 @@ const Wheels = (context) => {
 	const { config: { wheelLeft, wheels }} = context;
 
 	return <div>
-		{ map(wheels, (wheel) =>
+		{ map(wheels, (wheel, index) =>
 			<div
-				key={ wheel }
+				key={ index }
 				{ ...{
 					style: {	left: `${ wheelLeft * wheel.x }%`	 },
 					className: 'wheelCovers',
