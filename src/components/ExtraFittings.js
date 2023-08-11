@@ -2,7 +2,7 @@ import React from 'react';
 import { map } from '@laufire/utils/collection';
 
 const ExtraFittings = (context) => {
-	const { config: { indicators, indicatorsBottom }} = context;
+	const { config: { indicators }} = context;
 
 	return <div>
 		<div className="topCarrier"/>
@@ -14,7 +14,7 @@ const ExtraFittings = (context) => {
 			<div
 				key={ index }
 				style={ {
-					bottom: `${ indicatorsBottom * indicator.y }%`,
+					bottom: `${ indicator.y }%`,
 					backgroundColor: indicator.backgroundColor,
 				} }
 				className="indicators"

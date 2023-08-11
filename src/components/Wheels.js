@@ -3,7 +3,7 @@ import { map } from '@laufire/utils/collection';
 import { peek } from '@laufire/utils/debug';
 
 const Wheels = (context) => {
-	const { config: { wheelLeft, wheels }} = context;
+	const { config: { wheels }} = context;
 
 	peek(wheels);
 	return <div>
@@ -11,7 +11,7 @@ const Wheels = (context) => {
 			<div
 				key={ index }
 				{ ...{
-					style: {	left: `${ wheelLeft * wheel.x }%`	 },
+					style: {	left: `${ wheel.x }%`	 },
 					className: 'wheelCovers',
 				} }
 			>

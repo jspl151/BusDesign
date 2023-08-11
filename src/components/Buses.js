@@ -4,21 +4,15 @@ import Windows from './Windows';
 import Driver from './Driver';
 import Door from './Door';
 import Wheels from './Wheels';
-import { rndBetween } from '@laufire/utils/lib';
 import ExtraFittings from './ExtraFittings';
 import getRandomHex from '../services/getRandomHex';
 
-const min = 40;
-const max = 50;
-const dif = 20;
-
 const getBusStyle = (context) => {
-	const { config: { roadHeight }, data: bus } = context;
-	const size = rndBetween(min, max);
+	const { config: { roadHeight, busSize, busHeight }, data: bus } = context;
 
 	return {
-		width: `${ size }%`,
-		height: `${ size - dif }%`,
+		width: `${ busSize }%`,
+		height: `${ busSize - busHeight }%`,
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
 		animation: `${ bus.animation } 10s linear infinite`,
@@ -38,7 +32,7 @@ const Buses = (context) => {
 				className="bus"
 			>
 				<Driver { ...{ ...context, data: bus } }/>
-				<Door { ...{ ...context, data: bus } }/>
+				<Door { ...context }/>
 				<Windows { ...{ ...context, data: bus } }/>
 				<ExtraFittings { ...context }/>
 				<Wheels { ...context }/>
