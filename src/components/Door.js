@@ -2,7 +2,7 @@ import React from 'react';
 import { map } from '@laufire/utils/collection';
 
 const Door = (context) => {
-	const { config: { doorFrames, doorFramesRight }} = context;
+	const { config: { doorFrames }} = context;
 
 	return (
 		<div className="door">
@@ -10,7 +10,7 @@ const Door = (context) => {
 				<div
 					key={ index }
 					style={ {
-						right: `${ doorFramesRight * doorFrame.x }%`,
+						right: `${ doorFrame.x }%`,
 					} }
 					className="doorFrame"
 				/>))}

@@ -38,7 +38,7 @@ const Buses = (context) => {
 				className="bus"
 			>
 				<Driver { ...{ ...context, data: bus } }/>
-				<Door { ...context }/>
+				<Door { ...{ ...context, data: bus } }/>
 				<Windows { ...{ ...context, data: bus } }/>
 				<ExtraFittings { ...context }/>
 				<Wheels { ...context }/>
