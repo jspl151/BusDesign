@@ -1,11 +1,11 @@
 import React from 'react';
 import { map } from '@laufire/utils/collection';
 
-const Door = (context) => {
+const Doors = (context) => {
 	const { config: { doorFrames }} = context;
 
 	return (
-		<div className="door">
+		<div className="doors">
 			{(map(doorFrames, (doorFrame, index) =>
 				<div
 					key={ index }
@@ -17,4 +17,4 @@ const Door = (context) => {
 		</div>);
 };
 
-export default Door;
+export default Doors;

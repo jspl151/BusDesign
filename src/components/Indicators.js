@@ -10,7 +10,7 @@ const Indicators = (context) => {
 				key={ index }
 				style={ {
 					bottom: `${ indicator.y }%`,
-					backgroundColor: indicator.backgroundColor,
+					backgroundColor: indicator.color,
 				} }
 				className="indicators"
 			/>))}

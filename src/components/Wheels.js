@@ -10,11 +10,11 @@ const Wheels = (context) => {
 				key={ index }
 				{ ...{
 					style: {	left: `${ wheel.x }%`	 },
-					className: 'wheelCovers',
+					className: 'wheelCover',
 				} }
 			>
-				<div className="outerWheels">
-					<div className="innerWheels"/>
+				<div className="outerWheel">
+					<div className="innerWheel"/>
 				</div></div>)}
 	</div>;
 };

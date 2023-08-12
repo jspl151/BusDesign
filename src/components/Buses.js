@@ -2,18 +2,18 @@ import React from 'react';
 import { map } from '@laufire/utils/collection';
 import Windows from './Windows';
 import Driver from './Driver';
-import Door from './Door';
 import Wheels from './Wheels';
 import ExtraFittings from './ExtraFittings';
 import getRandomColor from '../services/getRandomColor';
+import Doors from './Doors';
 
 const getBusStyle = (context) => {
-	const { config: { roadHeight, busSize, busHeight }, data: bus } = context;
+	const { config: { roadHeight, busHeight }, data: bus } = context;
 
 	return {
-		width: `${ busSize }%`,
-		height: `${ busSize - busHeight }%`,
-		bottom: `${ roadHeight + bus.y }%`,
+		width: `${ bus.size }%`,
+		height: `${ bus.size - busHeight }%`,
+		bottom: `${ roadHeight - bus.y }%`,
 		left: `${ bus.x }%`,
 		animation: `${ bus.animation } 10s linear infinite`,
 		backgroundColor: `#${ getRandomColor() }`,
@@ -32,7 +32,7 @@ const Buses = (context) => {
 				className="bus"
 			>
 				<Driver { ...{ ...context, data: bus } }/>
-				<Door { ...context }/>
+				<Doors { ...context }/>
 				<Windows { ...{ ...context, data: bus } }/>
 				<ExtraFittings { ...context }/>
 				<Wheels { ...context }/>

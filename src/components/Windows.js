@@ -1,6 +1,5 @@
 import React from 'react';
-import { map } from '@laufire/utils/collection';
-import { values } from '@laufire/utils/lib';
+import { map, values } from '@laufire/utils/collection';
 
 const Windows = (context) => {
 	const { data: { windows: { x, passengers }}} = context;
