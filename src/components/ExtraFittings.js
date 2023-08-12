@@ -1,25 +1,13 @@
 import React from 'react';
-import { map } from '@laufire/utils/collection';
+import Indicators from './Indicators';
 
-const ExtraFittings = (context) => {
-	const { config: { indicators }} = context;
-
-	return <div>
-		<div className="topCarrier"/>
-		<div className="luggageSection"/>
-		<div className="luggageSecHandle"/>
-		<div className="mirror"/>
-		<div className="mirrorHandle"/>
-		{(map(indicators, (indicator, index) =>
-			<div
-				key={ index }
-				style={ {
-					bottom: `${ indicator.y }%`,
-					backgroundColor: indicator.backgroundColor,
-				} }
-				className="indicators"
-			/>))}
-	</div>;
-};
+const ExtraFittings = (context) => <div>
+	<div className="topCarrier"/>
+	<div className="luggageSection"/>
+	<div className="luggageSecHandle"/>
+	<div className="mirror"/>
+	<div className="mirrorHandle"/>
+	<Indicators { ...context }/>
+</div>;
 
 export default ExtraFittings;

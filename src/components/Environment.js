@@ -1,14 +1,11 @@
 import React from 'react';
 
-const maxHeight = 100;
-const fixHeight = 4;
-
 const Environment = (context) => {
-	const { config: { roadHeight }} = context;
+	const { config: { roadHeight, maxBackgroundHeight }} = context;
 
 	return (
 		<div
-			style={ { height: `${ maxHeight - roadHeight + fixHeight }vh` } }
+			style={ { height: `${ maxBackgroundHeight - roadHeight }vh` } }
 			className="environment"
 		/>);
 };

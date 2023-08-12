@@ -18,6 +18,7 @@ const minSize = 40;
 const maxSize = 50;
 
 const config = {
+	maxBackgroundHeight: 104,
 	roadHeight: 35,
 	stripesCount: 8,
 	stripeRight: 15,

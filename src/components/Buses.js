@@ -5,7 +5,7 @@ import Driver from './Driver';
 import Door from './Door';
 import Wheels from './Wheels';
 import ExtraFittings from './ExtraFittings';
-import getRandomHex from '../services/getRandomHex';
+import getRandomColor from '../services/getRandomColor';
 
 const getBusStyle = (context) => {
 	const { config: { roadHeight, busSize, busHeight }, data: bus } = context;
@@ -16,7 +16,7 @@ const getBusStyle = (context) => {
 		bottom: `${ roadHeight + bus.y }%`,
 		left: `${ bus.x }%`,
 		animation: `${ bus.animation } 10s linear infinite`,
-		backgroundColor: `#${ getRandomHex() }`,
+		backgroundColor: `#${ getRandomColor() }`,
 		transform: `scaleX(${ bus.direction })`,
 	};
 };
